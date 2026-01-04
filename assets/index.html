@@ -13,8 +13,17 @@
     </header>
 
     <main>
-        <p id="message">Click the button to see magic ✨</p>
-        <button onclick="changePage()">Click Me</button>
+        <p id="message">Fill the form below 👇</p>
+
+        <form onsubmit="showData(event)">
+            <input type="text" id="name" placeholder="Name" required><br><br>
+            <input type="email" id="email" placeholder="Email" required><br><br>
+            <input type="number" id="age" placeholder="Age" required><br><br>
+            <input type="text" id="city" placeholder="City" required><br><br>
+            <input type="text" id="note" placeholder="Message"><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
     </main>
 
     <footer>
