@@ -1,12 +1,25 @@
-function showData(event) {
+// Navbar toggle for mobile
+function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    navLinks.style.display =
+        navLinks.style.display === "flex" ? "none" : "flex";
+}
+
+// Login button alert
+function login() {
+    alert("Login clicked!");
+}
+
+// Form submission
+function submitForm(event) {
     event.preventDefault();
+    alert("Form submitted successfully!");
+}
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const age = document.getElementById("age").value;
-    const city = document.getElementById("city").value;
-    const note = document.getElementById("note").value;
-
-    document.getElementById("message").innerText =
-        `Hello ${name}! You are ${age} years old from ${city}.`;
+// Footer subscribe
+function subscribe(event) {
+    event.preventDefault();
+    const email = document.getElementById("subscribeEmail").value;
+    alert("Subscribed with: " + email);
+    document.getElementById("subscribeEmail").value = "";
 }

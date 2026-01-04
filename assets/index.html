@@ -2,32 +2,98 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>My Simple Website</title>
+    <title>Complete Semantic Website</title>
     <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-
 <body>
 
+    <!-- NAVBAR -->
     <header>
-        <h1>Welcome to My Website</h1>
+        <nav class="navbar">
+            <h1 class="logo">MyLogo</h1>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+
+            <button class="login-btn" onclick="login()">Login</button>
+            <button class="menu-icon" onclick="toggleMenu()">☰</button>
+        </nav>
     </header>
 
+    <!-- FORM SECTION -->
     <main>
-        <p id="message">Fill the form below 👇</p>
+        <section class="form-section">
+            <h2>Contact Form</h2>
+            <form onsubmit="submitForm(event)">
+                <input type="text" placeholder="Name" required><br>
+                <input type="email" placeholder="Email" required><br>
+                <input type="number" placeholder="Age" required><br>
+                <input type="text" placeholder="City"><br>
+                <input type="text" placeholder="Message"><br>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
 
-        <form onsubmit="showData(event)">
-            <input type="text" id="name" placeholder="Name" required><br><br>
-            <input type="email" id="email" placeholder="Email" required><br><br>
-            <input type="number" id="age" placeholder="Age" required><br><br>
-            <input type="text" id="city" placeholder="City" required><br><br>
-            <input type="text" id="note" placeholder="Message"><br><br>
+        <!-- IMAGE SECTION -->
+        <section class="gallery">
 
-            <button type="submit">Submit</button>
-        </form>
+            <!-- Image Left, Text Right -->
+            <article class="image-row">
+                <img src="download.jfif" alt="Sample Image 1">
+                <div class="image-text">
+                    <h3>Image One</h3>
+                    <p>This is a description of the first image. It explains what the image is about.</p>
+                </div>
+            </article>
+
+            <!-- Image Right, Text Left -->
+            <article class="image-row">
+                <div class="image-text">
+                    <h3>Image Two</h3>
+                    <p>This is a description of the second image. Text appears on the left side.</p>
+                </div>
+                <img src="download.jfif" alt="Sample Image 2">
+            </article>
+
+        </section>
     </main>
 
+    <!-- FOOTER -->
     <footer>
-        <p>© 2026 My Website</p>
+        <!-- Left: Logo + Links -->
+        <section class="footer-left">
+            <h2 class="footer-logo">MyLogo</h2>
+            <nav>
+                <ul class="footer-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </nav>
+        </section>
+
+        <!-- Center: Social Media -->
+        <section class="footer-center">
+            <h3>Follow Us</h3>
+            <nav class="social-icons">
+                <a href="#">📸 Instagram</a>
+                <a href="#">📘 Facebook</a>
+                <a href="#">💻 GitHub</a>
+            </nav>
+        </section>
+
+        <!-- Right: Subscribe -->
+        <section class="footer-right">
+            <h3>Subscribe</h3>
+            <form onsubmit="subscribe(event)">
+                <input type="email" id="subscribeEmail" placeholder="Your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
     </footer>
 
     <script src="../assets/js/script.js"></script>
